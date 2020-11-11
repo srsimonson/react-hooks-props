@@ -17,7 +17,7 @@ function Inputs() {
     }, [val1])
 
     useEffect(() => {
-        console.log(`Value 1 best food: ${val1}`);
+        console.log(`Value 2 best food: ${val2}`);
     }, [val1, val2])
     
     return (
