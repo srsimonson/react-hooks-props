@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './Components/OldApp';
 import App from './Components/App';
+import Hello from './Components/Hello';
 import Checkbox from './Components/Checkbox';
 import Inputs from './Components/Inputs';
+import GithubData from './Components/GithubData';
 
 // import Hello from './Components/Hello';
 
@@ -30,6 +32,8 @@ ReactDOM.render(
     />
     <Checkbox/>
     <Inputs/>
+    <Hello/>
+    <GithubData/>
     {/* <Hello/> */}
   </React.StrictMode>,
 
