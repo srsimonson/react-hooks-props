@@ -7,19 +7,24 @@ function Weather({city}) {
     const [data, setData] = useState(null);
     useEffect(() => {
         fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
-        // fetch(`https://api.giphy.com/v1/gifs/random?api_key=${process.env.REACT_APP_GIPHY_API_KEY}&tag=&rating=g`)
             .then(res => res.json())
             .then(setData)
             .catch(console.error)
     }, []);
 
     if (data) {
+        let temp = data.main.temp;
+        let tempInC = (temp - 273.15)
+        let tempInF = (temp - 273.15) * 9/5 + 32;
         return (
             <>
                 <h1>WEATHER:</h1>
                 <div>{JSON.stringify(data)}</div>
                 <div>
-                    {/* <h1>{data}</h1> */}
+                    <h1>{data.name}</h1>
+                    <p>{data.weather[0].description}</p>
+                    <p>{tempInC} degrees C</p>
+                    <p>{tempInF} degrees F</p>
                 </div>
             </>
         )
@@ -28,7 +33,7 @@ function Weather({city}) {
 }
 
 function GithubData() {
-    return <Weather city="Tirana"/>
+    return <Weather city="tirana"/>
 }
 
 ReactDOM.render(

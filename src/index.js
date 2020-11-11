@@ -8,6 +8,7 @@ import Checkbox from './Components/Checkbox';
 import Inputs from './Components/Inputs';
 import GithubData from './Components/GithubData';
 import Weather from './Components/Weather';
+import RandomGif from './Components/RandomGif';
 
 // import Hello from './Components/Hello';
 
@@ -36,6 +37,7 @@ ReactDOM.render(
     <Hello/>
     <GithubData/>
     <Weather/>
+    <RandomGif/>
     {/* <Hello/> */}
   </React.StrictMode>,
 
