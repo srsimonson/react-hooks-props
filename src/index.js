@@ -1,17 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import App from './Components/OldApp';
+import App from './Components/App';
+import Checkbox from './Components/Checkbox';
+
+// import Hello from './Components/Hello';
+
+// let city = {
+//   name: 'Madrid',
+//   country: 'Spain'
+// };
+
+// const lakeList = ['Echo Lake', 'Lake Eerie', 'Lake Pepin']
+
+const lakeList = [
+  { id: '1', name: 'Echo', trailhead: 'Echo' },
+  { id: '2', name: 'Pepin', trailhead: 'Colvill' },
+  { id: '3', name: 'Superior', trailhead: 'Duluth' },
+]
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App 
+      lakes={lakeList}
+      season='summer'
+      
+    />
+    <Checkbox/>
+    {/* <Hello/> */}
   </React.StrictMode>,
+
+  // ReactDOM.render takes in 2 arguments. Element we want to create, and where we want to render it
+  // React.createElement takes in 3 elements: tag, properties, and children.
+  // You can also createElement as the 3rd argument.
+
+    // React.createElement('div', {style: {color: 'blue'} }, React.createElement('h1', null, 'Hi again!')),
+
+    // <h1>Hello from {city.name} in {city.country}!</h1>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
