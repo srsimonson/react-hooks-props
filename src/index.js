@@ -4,6 +4,7 @@ import './index.css';
 // import App from './Components/OldApp';
 import App from './Components/App';
 import Checkbox from './Components/Checkbox';
+import Inputs from './Components/Inputs';
 
 // import Hello from './Components/Hello';
 
@@ -28,6 +29,7 @@ ReactDOM.render(
       
     />
     <Checkbox/>
+    <Inputs/>
     {/* <Hello/> */}
   </React.StrictMode>,
 

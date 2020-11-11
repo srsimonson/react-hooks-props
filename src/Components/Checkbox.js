@@ -6,7 +6,7 @@ function Checkbox() {
     const [checked, setChecked] = useState(false);
     // Effects are anything that isn't UI. Alerts, logs, etc.
     useEffect(() => {
-        alert(`checked: ${checked.toString()}`)
+        console.log(`checked: ${checked.toString()}`)
     })
     return (
         <>
