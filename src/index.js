@@ -4,6 +4,7 @@ import './index.css';
 // import App from './Components/OldApp';
 import App from './Components/App';
 import Hello from './Components/Hello';
+import Geolocation from './Components/Geolocation'
 import Checkbox from './Components/Checkbox';
 import Inputs from './Components/Inputs';
 import GithubData from './Components/GithubData';
@@ -30,11 +31,11 @@ ReactDOM.render(
     <App 
       lakes={lakeList}
       season='summer'
-      
     />
     <Checkbox/>
     <Inputs/>
     <Hello/>
+    <Geolocation/>
     <GithubData/>
     <Weather/>
     <RandomGif/>

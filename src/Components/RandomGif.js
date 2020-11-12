@@ -13,7 +13,7 @@ function RandomGif({rating}) {
     }, []);
 
     if (data) {
-        console.log('data: ', data.data.images);
+        console.log('data: ', data.data);
         let gif = data.data.images.fixed_width.url
         return (
             <>

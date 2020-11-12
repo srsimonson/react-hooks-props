@@ -1,22 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
 
 function Checkbox() {
-    const [checked, setChecked] = useState(false);
+    const [checked, toggle] = useReducer( 
+        checked => !checked, 
+        false);
     // Effects are anything that isn't UI. Alerts, logs, etc.
-    useEffect(() => {
-        console.log(`checked: ${checked.toString()}`)
-    })
+    // Reducer: takes in current state and returns a new state.
+
     return (
         <>
+        <br/>
             <input 
                 type='checkbox' 
                 value={checked}
-                onChange={() => 
-                    setChecked(checked => !checked)}
+                onChange={toggle}
             />
-            {checked ? 'checked' : 'not checked'}
+            {checked ? ' checked' : ' not checked'}
+            <br/>
         </>
     )
 }

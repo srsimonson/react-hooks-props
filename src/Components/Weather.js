@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Component } from 'react';
 import ReactDOM from 'react-dom';
+import Geolocation from './Geolocation';
 // import './index.css';
+
+export const MContext = React.createContext();
 
 // Fetch data from API.
 function Weather({city}) {
+
     const [data, setData] = useState(null);
     useEffect(() => {
         fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
